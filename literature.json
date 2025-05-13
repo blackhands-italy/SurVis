@@ -1,0 +1,14 @@
+{
+  "documents": [
+    {
+      "id": "yu2024deep",
+      "title": "Deep Learning Models for PV Power Forecasting: Review",
+      "authors": ["J. Yu", "X. Li", "L. Yang", "Z. Huang", "K. Shen", "S. Du"],
+      "year": 2024,
+      "tags": ["PV Forecasting", "Deep Learning"],
+      "abstract": "This paper provides a review of deep learning models applied to photovoltaic (PV) power forecasting...",
+      "venue": "Energies",
+      "doi": "10.3390/en17163973"
+    }
+  ]
+}
