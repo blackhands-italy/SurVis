@@ -1,69 +1,9 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>SurVis Literature Viewer</title>
-  <style>
-    body { font-family: sans-serif; padding: 2em; max-width: 1000px; margin: auto; }
-    h1 { color: #2c3e50; }
-    .paper { border-bottom: 1px solid #ccc; padding: 1em 0; }
-    .doi { font-size: 0.9em; color: #555; }
-    .tags span { background: #eee; margin-right: 4px; padding: 2px 6px; border-radius: 4px; font-size: 0.8em; }
-  </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="properties.js"></script>
+    <script data-main="js/app.js" src="js/require.js"></script>
 </head>
 <body>
-  <h1>AI for PV and Storage Literature Review</h1>
-  <div id="papers">Loading papers...</div>
-
-  <script>
-    async function loadData() {
-      const res = await fetch('../literature.json');
-      const data = await res.json();
-      const papersDiv = document.getElementById('papers');
-      papersDiv.innerHTML = '';
-      const years = {};
-
-      data.documents.forEach(doc => {
-        const div = document.createElement('div');
-        div.className = 'paper';
-        div.innerHTML = `<strong>${doc.title}</strong><br>
-                         <em>${doc.authors.join(', ')}</em> (${doc.year})<br>
-                         <span class="doi">DOI: <a href="https://doi.org/${doc.doi}" target="_blank">${doc.doi}</a></span><br>
-                         <div class="tags">${doc.tags.map(tag => `<span>${tag}</span>`).join(' ')}</div>
-                         <p>${doc.abstract}</p>`;
-        papersDiv.appendChild(div);
-
-        years[doc.year] = (years[doc.year] || 0) + 1;
-      });
-
-      const chart = document.createElement('div');
-      chart.innerHTML = '<h2>Year Distribution</h2><svg width="600" height="200"></svg>';
-      papersDiv.prepend(chart);
-      const svg = chart.querySelector('svg');
-      const barWidth = 40;
-      const sortedYears = Object.keys(years).sort();
-
-      sortedYears.forEach((year, i) => {
-        const count = years[year];
-        const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-        rect.setAttribute("x", i * (barWidth + 10));
-        rect.setAttribute("y", 200 - count * 20);
-        rect.setAttribute("width", barWidth);
-        rect.setAttribute("height", count * 20);
-        rect.setAttribute("fill", "#3498db");
-        svg.appendChild(rect);
-
-        const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
-        label.setAttribute("x", i * (barWidth + 10) + 5);
-        label.setAttribute("y", 195);
-        label.setAttribute("font-size", "12px");
-        label.textContent = year;
-        svg.appendChild(label);
-      });
-    }
-
-    loadData();
-  </script>
 </body>
 </html>
