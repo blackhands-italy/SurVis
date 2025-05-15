@@ -12,18 +12,6 @@
         "volume": "4",
         "year": "2024"
     },
-    "bhupathi2024battery": {
-        "author": "Bhupathi, Hari Prasad and Chinta, Srikiran",
-        "doi": "10.56472/25832646/JETA-V4I4P113",
-        "journal": "ESP Journal of Engineering & Technology Advancements",
-        "keywords": "type:journal, battery health, monitoring, longevity, ai",
-        "number": "4",
-        "pages": "103--112",
-        "title": "Battery Health Monitoring With AI: Creating Predictive Models to Assess Battery Performance and Longevity",
-        "type": "article",
-        "volume": "4",
-        "year": "2024"
-    },
     "dineva2024evaluation": {
         "author": "Dineva, A.",
         "doi": "10.3390/batteries10100356",
@@ -45,6 +33,18 @@
         "title": "AI-Driven Prognostics for State of Health Prediction in Li-ion Batteries: A Comprehensive Analysis with Validation",
         "type": "article",
         "volume": "arXiv:2504.05728",
+        "year": "2025"
+    },
+    "kumar2025ai": {
+        "author": "Kumar, Shivam and Praveen, K and Prajwal, G S and Ajan, Akheera and Shravan, Shalini",
+        "doi": "10.17148/IJARCCE.2025.14503",
+        "journal": "International Journal of Advanced Research in Computer and Communication Engineering",
+        "keywords": "type:journal,battery health, AI, predictive modeling, CNN, LSTM",
+        "number": "5",
+        "pages": "19--25",
+        "title": "AI-Based Predictive Battery Health Monitoring System",
+        "type": "article",
+        "volume": "14",
         "year": "2025"
     },
     "li2024battery": {
